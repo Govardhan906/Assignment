@@ -1,0 +1,158 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles for centering the card (NFR1) */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Card container */
+.card-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Profile card styles */
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* NFR3: Hover animation */
+}
+
+/* NFR3: Hover animation */
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile image styles */
+.profile-image {
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile info styles */
+.profile-info {
+    margin-bottom: 25px;
+}
+
+.name {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.designation {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.bio {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Social links styles */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Increased gap for better spacing */
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #666;
+    text-decoration: none;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.social-icon:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Individual icon styling */
+.social-icon:nth-child(1):hover {  /* Portfolio */
+    background-color: #2ecc71;
+}
+
+.social-icon:nth-child(2) {  /* LinkedIn */
+    font-weight: bold;
+    background-color: #0077b5;
+    color: white;
+    font-size: 16px;
+}
+
+.social-icon:nth-child(2):hover {
+    background-color: #005582;
+}
+
+.social-icon:nth-child(3):hover {  /* GitHub */
+    background-color: #333;
+}
+
+.social-icon:nth-child(4):hover {  /* Link */
+    background-color: #3498db;
+}
+
+/* NFR2: Responsive design */
+@media (max-width: 480px) {
+    .card-container {
+        padding: 15px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .designation {
+        font-size: 14px;
+    }
+
+    .bio {
+        font-size: 13px;
+    }
+} 
